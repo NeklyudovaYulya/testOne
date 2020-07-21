@@ -1,4 +1,4 @@
-Document.addEventListener("DOMContentLeaded", (event) => {
+
 function calculate(){
     var bill_count = document.getElementById('bill_count').value;
     var service_quality = document.getElementById('service_quality').value;
@@ -36,6 +36,6 @@ document.getElementById("each").style.display = "none";
 
 document.getElementById("calculate").onclick = function(){
     calculate();
-};
-});
+}
+
 

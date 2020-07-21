@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Meal Cost</title>
+<body>
+    <div id="container">
+        <form id="form">
+        <p>Size of your box</p>
+        <div class = "radio_buttons_container">
+            <input type="radio" name="size" id="small" value ="small">
+            <label for="small">Small</label>
+            <input type="radio" name="size" id="large" value ="large">
+            <label for="large">Large</label>
+        </div>
+
+        <p>Base of your box</p>
+        <div class= "radio_buttons_container">
+            <input type="radio" name="garnish" id="noodles" value ="noodles">
+            <label for=" noodles"> Noodles</label>
+            
+            <input type="radio" name="garnish" id="rice" value ="rice">
+            <label for="rice">Rice</label>
+        </div> 
+
+        <p>Topping for your box</p>
+        <div class ="box">
+        <div class = "radio_buttons_container">
+          
+            <input type="radio" name="add" id="pork" value ="pork">
+            <label for=" pork"> Pork </label>
+
+            <input type="radio" name="add" id="beef" value ="beef">
+            <label for="beef">Beef </label> 
+         
+            <input type="radio" name="add" id="chicken" value ="chicken">
+            <label for="chicken">Chicken </label>
+        </div>
+        
+    </div>
+
+        <p>Do you want to add something?</p>
+        <div class="radio_buttons_container">  
+                    <input type="radio" name="add" id="bread_crumbs:" value="bread_crumbs:">Bread crumbs
+                    <input type="radio" name="add" id ="extra_sauce" value="extra_sauce">Extra sauce     
+        </div>
+
+        <br> <input type="submit" id="calculate" value = "Calculate!">
+
+        </form>
+
+    <!-- CALCULATOR end -->
+    <!-- TIPS start -->
+    <div id="cost">
+      <span id="price">0.00</span><sup>$</sup> <br>
+      <span id="calories">00</span> <small>calories</small>
+    </div>
+    <!-- TIPS end -->
+  </div>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
