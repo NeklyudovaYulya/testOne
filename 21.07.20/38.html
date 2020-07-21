@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body>
+        <i id="elem">
+            <span>Я потомок</span>
+            <p>Я тоже, но не первый</p>
+        </i>
+        <span>Я не потомок</span>
+        <script>
+            var elem = document.getElementById('elem');
+            for (var i = 0; i < elem.children.length; i++){
+                elem.children[i].innerHTML += '!';
+            }
+        </script>
+    </body>
+</html>
