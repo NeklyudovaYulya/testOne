@@ -1,4 +1,4 @@
-import { keypress, ul_checked, pencil_show_hide, save_todo, clear_todo, tips, close } from "./clickers.js";
+import { keypress, ul_checked, pencil_show_hide, save_todo, clear_todo, tips, close, fun } from "./clickers.js";
 import { cat_facts } from "./cat_facts.js";
 
 // Document ready
@@ -15,9 +15,10 @@ $(document).ready(() => {
   clear_todo();
   tips();
   close();
+  fun();
 
   // Load cat facts data
-  cat_facts("https://cat-fact.herokuapp.com/facts/random?animal_type&amount=10")
+  cat_facts("https://cat-fact.herokuapp.com/facts/random?animal_type&amount=3")
     .done(data => {
       console.log(data);
       setFactsData(data);
@@ -25,10 +26,12 @@ $(document).ready(() => {
     .fail(err => {
       console.log(err);
     })
-    
-    function setFactsData(cat_facts) {
+
+  function setFactsData(cat_facts) {
     cat_facts.map(elem => {
-      ul_cat_facts.append(document.createElement('li'), elem.text)
+      let li = document.createElement('li');
+      li.innerText = elem.text;
+      ul_cat_facts.append(li);
     })
     console.log(ul_cat_facts);
   }
@@ -52,18 +55,6 @@ $(document).ready(() => {
   deleteTodo();
   loadTodos();
 });
-
-
-
-/*let request = require("request");
-
-console.log();
-request.get(
-    "https:\/\/randomfox.ca\/images\/73.jpg","link":"https:\/\/randomfox.ca\/?i=73",
-    function(data, error, body){
-        console.log(JSON.parse(body));
-    } начало видео
-);*/
 
 
 

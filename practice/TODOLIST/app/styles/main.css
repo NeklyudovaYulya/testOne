@@ -42,6 +42,15 @@ span {
 i {
   cursor: pointer; }
 
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding: 10px 30px; }
+
 button {
   background-color: #eecda3;
   border: none;
@@ -65,7 +74,7 @@ button:hover {
 #buttons {
   display: inline-block;
   text-align: center;
-  margin-left: 35%;
+  margin-left: 25%;
   position: absolute;
   bottom: 5px; }
 
@@ -78,20 +87,20 @@ button:hover {
   background: white;
   position: relative; }
 
-#overlay {
+.overlay {
   height: 0;
   width: 100%;
   position: fixed;
   z-index: 1;
-  left: 20;
-  top: 10;
+  left: 0;
+  top: 0;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
   transition: 0.5s;
   -webkit-transition: 0.5s; }
 
-#overlay .closebtn {
+.overlay .closeBtn {
   position: absolute;
   top: 15px;
   right: 40px;
@@ -99,11 +108,12 @@ button:hover {
   color: black;
   cursor: pointer; }
 
-#overlay li {
-  padding: 8px;
+.overlay li {
+  padding: 5px 10px;
   list-style-type: circle;
-  font-size: 30px;
-  color: #818181;
+  text-shadow: 2px 0 20px #FFFACD, 7px -5px 45px rgba(254, 185, 15, 0.6), -30px -10px 50px #FFC125, 0 -45px 60px #ec760c, 45px -25px 60px rgba(93, 46, 5, 0.3), -50px -70px 60px rgba(80, 27, 2, 0.9), 35px -65px 60px #cd4606, 15px -85px 80px #222, 65px -89px 80px rgba(2, 3, 2, 0.6);
+  font-size: 25px;
+  color: #f5ca91;
   display: block; }
 
 .todos {
@@ -151,7 +161,7 @@ button:hover {
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px; }
-  .overlay .closebtn {
+  .overlay .closeBtn {
     font-size: 35px;
     top: 15px;
     right: 35px; }
